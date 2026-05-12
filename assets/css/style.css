@@ -1,76 +1,116 @@
+
+
+:root {
+  --bg-dark: #0f1117;
+  --bg-card: #1a1d27;
+  --accent: #ffc107;
+  --text-light: #e9ecef;
+}
+
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: "Segoe UI", Roboto, system-ui, sans-serif;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
+a { color: var(--accent); }
+a:hover { color: #ffd54f; }
+
+.navbar-brand .logo {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--accent) !important;
 }
 
-.carousel-img {
-    height: 550px;
-    object-fit: cover;
-    border-radius: 15px;
+
+.slider-img {
+  height: 70vh;
+  min-height: 360px;
+  max-height: 600px;
+  object-fit: cover;
+  filter: brightness(0.6);
 }
 
 .carousel-caption {
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 10px;
-    padding: 20px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7));
+  padding: 2rem;
+  border-radius: 8px;
+  bottom: 2rem;
 }
 
-.card-game-img {
-    height: 250px;
-    object-fit: cover;
+.carousel-caption h2 { font-size: clamp(1.5rem, 4vw, 3rem); }
+
+
+.card-jogo {
+  background-color: var(--bg-card);
+  color: var(--text-light);
+  border: 1px solid #2a2e3a;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.game-card {
-    transition: 0.3s;
+.card-jogo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
 }
 
-.game-card:hover {
-    transform: scale(1.03);
+.card-jogo-img {
+  height: 220px;
+  object-fit: cover;
 }
 
-.perfil-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+.card-jogo .card-title a:hover { color: var(--accent); }
+
 
 .detalhe-img {
-    border-radius: 15px;
-    width: 100%;
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
 }
 
-.personagem-img {
-    height: 300px;
-    object-fit: cover;
+.detalhe-info {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.detalhe-info .list-group-item {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: #2a2e3a;
 }
 
 
-/* RESPONSIVIDADE */
-@media(max-width: 768px) {
+.autor-section {
+  background-color: var(--bg-card);
+  border-top: 3px solid var(--accent);
+  padding: 3rem 0;
+}
 
-    .carousel-img {
-        height: 300px;
-    }
+.autor-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  object-fit: ;
+}
 
-    .carousel-caption h3 {
-        font-size: 1.2rem;
-    }
 
-    .carousel-caption p {
-        font-size: 0.8rem;
-    }
+footer {
+  background-color: #0a0c11;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  color: #9aa0a6;
+  font-size: 0.9rem;
+}
+@media (max-width: 575.98px) {
+  .slider-img { height: 50vh; }
+  .carousel-caption { padding: 1rem; bottom: 1rem; }
+  .carousel-caption h2 { font-size: 1.4rem; }
+  .card-jogo-img { height: 180px; }
+  .detalhe-img { max-height: 280px; }
+}
 
-    .logo {
-        font-size: 1.4rem;
-    }
-
-    nav {
-        display: none;
-    }
+@media (max-width: 991.98px) {
+  .detalhe-img { max-height: 360px; }
 }
