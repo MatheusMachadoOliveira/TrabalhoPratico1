@@ -1,0 +1,76 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carousel-img {
+    height: 550px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-game-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.game-card {
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.03);
+}
+
+.perfil-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.detalhe-img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.personagem-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/* RESPONSIVIDADE */
+@media(max-width: 768px) {
+
+    .carousel-img {
+        height: 300px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    nav {
+        display: none;
+    }
+}
