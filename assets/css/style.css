@@ -1,5 +1,4 @@
 
-
 :root {
   --bg-dark: #0f1117;
   --bg-card: #1a1d27;
@@ -13,8 +12,18 @@ body {
   font-family: "Segoe UI", Roboto, system-ui, sans-serif;
 }
 
-a { color: var(--accent); }
-a:hover { color: #ffd54f; }
+/* LINKS */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffd54f;
+}
+
+/* NAVBAR */
 
 .navbar-brand .logo {
   font-weight: 800;
@@ -22,6 +31,7 @@ a:hover { color: #ffd54f; }
   color: var(--accent) !important;
 }
 
+/* CARROSSEL */
 
 .slider-img {
   height: 70vh;
@@ -31,26 +41,27 @@ a:hover { color: #ffd54f; }
   filter: brightness(0.6);
 }
 
-.carousel-caption {
-  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7));
-  padding: 2rem;
-  border-radius: 8px;
-  bottom: 2rem;
+.carousel-caption h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
-.carousel-caption h2 { font-size: clamp(1.5rem, 4vw, 3rem); }
-
+/* CARDS DOS JOGOS */
 
 .card-jogo {
   background-color: var(--bg-card);
   color: var(--text-light);
   border: 1px solid #2a2e3a;
-  transition: transform .25s ease, box-shadow .25s ease;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
 }
 
 .card-jogo:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.5);
 }
 
 .card-jogo-img {
@@ -58,8 +69,11 @@ a:hover { color: #ffd54f; }
   object-fit: cover;
 }
 
-.card-jogo .card-title a:hover { color: var(--accent); }
+.card-jogo .card-title a:hover {
+  color: var(--accent);
+}
 
+/* PÁGINA DETALHES */
 
 .detalhe-img {
   width: 100%;
@@ -79,21 +93,27 @@ a:hover { color: #ffd54f; }
   border-color: #2a2e3a;
 }
 
+/* SOBRE O AUTOR */
 
 .autor-section {
   background-color: var(--bg-card);
   border-top: 3px solid var(--accent);
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
-.autor-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  object-fit: ;
+.autor-section h3 {
+  color: var(--accent);
 }
 
+.autor-texto {
+  line-height: 1.8;
+  color: #c9ced6;
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* FOOTER */
 
 footer {
   background-color: #0a0c11;
@@ -103,14 +123,36 @@ footer {
   color: #9aa0a6;
   font-size: 0.9rem;
 }
+
+/* RESPONSIVIDADE */
+
 @media (max-width: 575.98px) {
-  .slider-img { height: 50vh; }
-  .carousel-caption { padding: 1rem; bottom: 1rem; }
-  .carousel-caption h2 { font-size: 1.4rem; }
-  .card-jogo-img { height: 180px; }
-  .detalhe-img { max-height: 280px; }
+
+  .slider-img {
+    height: 50vh;
+  }
+
+  .carousel-caption {
+    padding: 1rem;
+    bottom: 1rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.4rem;
+  }
+
+  .card-jogo-img {
+    height: 180px;
+  }
+
+  .detalhe-img {
+    max-height: 280px;
+  }
 }
 
 @media (max-width: 991.98px) {
-  .detalhe-img { max-height: 360px; }
+
+  .detalhe-img {
+    max-height: 360px;
+  }
 }
